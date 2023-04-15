@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-position: center;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.icon {
+  background-color: #ffc000;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+.icon:hover {
+  box-shadow: 0 0 7px 0px black;
+}
+
+.head {
+  background-image: url("../images/istanbul.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.head .text {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.385);
+}
+.head .text h1 {
+  padding-top: 4rem;
+  color: #ffc000;
+  font-weight: 800;
+  font-size: 50px;
+}
+.head .text p {
+  max-width: 500px;
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  bottom: 160px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  box-shadow: 0px 6px 20px 6px rgba(0, 0, 0, 0.3294117647);
+}
+@media screen and (max-width: 768px) {
+  .form {
+    grid-template-columns: 100%;
+  }
+}
+.form .left {
+  background-image: url("../images/photo2.png");
+  background-position: -100px center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: 900;
+  font-size: 45px;
+}
+@media screen and (max-width: 992px) {
+  .form .left {
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form .left {
+    text-align: center;
+    background-image: none;
+    background-color: #ffc000;
+  }
+}
+.form .right {
+  background-color: #1a1a1a;
+  color: white;
+}
+.form .right h4 {
+  border-bottom: solid 2px white;
+}
+.form .right form {
+  text-align: center;
+}
+.form .right form .inputs {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 768px) {
+  .form .right form .inputs {
+    grid-template-columns: 100%;
+  }
+}
+.form .right form .input {
+  width: 95%;
+  position: relative;
+  text-align: start;
+}
+@media screen and (max-width: 768px) {
+  .form .right form .input {
+    width: 100%;
+  }
+}
+.form .right form .input input {
+  width: 100%;
+  border: #1a1a1a 1px solid;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #333;
+  transition: 0.3s ease-in-out;
+  caret-color: #ffc000;
+  color: white;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form .right form .input input.right-input {
+  margin-left: 5%;
+}
+@media screen and (max-width: 768px) {
+  .form .right form .input input.right-input {
+    margin-left: 0%;
+  }
+}
+.form .right form .input input:hover {
+  border: #ffc000 1px solid;
+}
+.form .right form .input input::-moz-placeholder {
+  color: #989898;
+}
+.form .right form .input input::placeholder {
+  color: #989898;
+}
+.form .right form .input input:focus {
+  border: #ffc000 1px solid;
+  outline: none;
+}
+.form .right form .input input.false {
+  border: 1px solid #ff0000;
+}
+.form .right form .input input.false:hover {
+  border: 1px solid #ff0000;
+}
+.form .right form .input input.false:focus {
+  border: 1px solid #ff0000;
+}
+.form .right form .input p {
+  color: #ff0000;
+  font-size: 12px;
+}
+.form .right form .input p span {
+  color: #1a1a1a;
+}
+.form .right form .input p.right-p {
+  margin-left: 5%;
+}
+@media screen and (max-width: 768px) {
+  .form .right form .input p.right-p {
+    margin-left: 0%;
+  }
+}
+.form .right form .input div {
+  position: absolute;
+  top: 14%;
+  right: 2%;
+}
+.form .right form .input div.right-div {
+  right: -3%;
+}
+@media screen and (max-width: 768px) {
+  .form .right form .input div.right-div {
+    right: 2%;
+  }
+}
+.form .right form button {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 2px;
+  background-color: #ffc000;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.form .right form button:hover {
+  background-color: white !important;
+  color: #ffc000;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  font-size: 17px;
+}
+
+.hideme {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hideme {
+    display: block;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: none;
+}
+
+.map {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map .close {
+  position: absolute;
+  z-index: 3;
+  top: 2%;
+  left: 2%;
+  color: #ffc000;
+}
+.map .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4117647059);
+}
+.map .content {
+  max-width: 600px;
+  width: 90%;
+  height: 500px;
+  position: fixed;
+  z-index: 3;
+}
+@media screen and (max-width: 768px) {
+  .map .content .fields {
+    grid-template-columns: 100%;
+  }
+}
+.map .content .fields .input {
+  width: 100%;
+  position: relative;
+  text-align: start;
+}
+@media screen and (max-width: 768px) {
+  .map .content .fields .input {
+    width: 100%;
+  }
+}
+.map .content .fields .input input {
+  width: 100%;
+  border: #1a1a1a 1px solid;
+  border-radius: 2px;
+  padding: 10px;
+  background-color: #333;
+  transition: 0.3s ease-in-out;
+  caret-color: #ffc000;
+  color: white;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.map .content .fields .input input:hover {
+  border: #ffc000 1px solid;
+}
+.map .content .fields .input input::-moz-placeholder {
+  color: #989898;
+}
+.map .content .fields .input input::placeholder {
+  color: #989898;
+}
+.map .content .fields .input input:focus {
+  border: #ffc000 1px solid;
+  outline: none;
+}
+.map .content .fields .input input.false {
+  border: 1px solid #ff0000;
+}
+.map .content .fields .input input.false:hover {
+  border: 1px solid #ff0000;
+}
+.map .content .fields .input input.false:focus {
+  border: 1px solid #ff0000;
+}
+.map .content .fields .input p {
+  color: #ff0000;
+  font-size: 12px;
+}
+.map .content .fields .input div {
+  position: absolute;
+  top: 20%;
+  right: 2%;
+}
+.map .content .fields .input div.false {
+  top: 15%;
+}
+.map .content .google-map {
+  background-color: white;
+  width: 100%;
+  height: 400px;
+}
+
+.features {
+  margin-top: -5rem;
+}
+.features .title {
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.features .title h3 {
+  padding: 0 10px;
+}
+.features .title div {
+  background-color: #ffc000;
+  height: 3px;
+  width: 40px;
+}
+.features .all-feat {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 992px) {
+  .features .all-feat {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .features .all-feat {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.features .all-feat .feat {
+  background-color: #1a1a1a;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.305);
+  border-radius: 5px;
+  padding: 40px 20px;
+  color: white;
+}
+.features .all-feat .feat .feat-icon {
+  color: #ffc000;
+  font-size: 30px;
+}
+
+.imagebar {
+  background-color: #1a1a1a;
+}
+.imagebar .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.imagebar .content .left-text {
+  padding: 20px 0px;
+}
+@media screen and (max-width: 768px) {
+  .imagebar .content {
+    grid-template-columns: 1fr;
+    padding: 20px 0px;
+  }
+  .imagebar .content .left-text {
+    padding: 0;
+  }
+  .imagebar .content .image {
+    order: -1;
+  }
+}
+.imagebar h3 {
+  color: #ffc000;
+}
+.imagebar p {
+  color: white;
+}
+
+.choose {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choose .close {
+  position: absolute;
+  z-index: 3;
+  top: 2%;
+  left: 2%;
+  color: #ffc000;
+}
+.choose .backgroundvans {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4117647059);
+}
+.choose .contentvans {
+  position: relative;
+  z-index: 3;
+  color: #817d70;
+  overflow-y: scroll;
+}
+.choose .contentvans .mycards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.choose .contentvans .mycards .mycard {
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+.choose .contentvans .mycards .mycard:hover {
+  border: 1px solid #ffc000;
+}
+.choose .contentvans .mycards .mycard h5 {
+  color: white;
+}
+.choose .contentvans button {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 2px;
+  background-color: #ffc000;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.choose .contentvans button:hover {
+  background-color: white;
+  color: #ffc000;
+}
+
+.card-image {
+  width: 300px;
+  height: 200px;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.selected {
+  border: 1px solid #ffc000;
+}
+
+.note {
+  color: #ff0000;
+  font-weight: 900;
+  position: absolute;
+  z-index: 3;
+  top: 2%;
+}
+@media screen and (max-width: 768px) {
+  .note {
+    top: 10%;
+    left: 2%;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=index.css.map */

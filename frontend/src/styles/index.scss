@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-position: center;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.icon {
+  background-color: #ffc000;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 7px 0px black;
+  }
+}
+
+@import "./head";
+@import "./form";
+@import "./map";
+@import "./features";
+@import "./imagebar";
+@import "./choosevan";

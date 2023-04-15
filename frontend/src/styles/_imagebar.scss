@@ -1,0 +1,41 @@
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.imagebar {
+  background-color: #1a1a1a;
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 30px;
+
+    .left-text {
+      padding: 20px 0px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding: 20px 0px;
+
+      .left-text {
+        padding: 0;
+      }
+
+      .image {
+        order: -1;
+      }
+    }
+  }
+
+  h3 {
+    color: #ffc000;
+  }
+
+  p {
+    color: white;
+  }
+}

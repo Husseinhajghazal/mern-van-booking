@@ -1,0 +1,65 @@
+@mixin tablet {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mmobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+.features {
+  margin-top: -5rem;
+
+  .title {
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      padding: 0 10px;
+    }
+
+    div {
+      background-color: #ffc000;
+      height: 3px;
+      width: 40px;
+    }
+  }
+
+  .all-feat {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mmobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feat {
+      background-color: #1a1a1a;
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.305);
+      border-radius: 5px;
+      padding: 40px 20px;
+      color: white;
+
+      .feat-icon {
+        color: #ffc000;
+        font-size: 30px;
+      }
+    }
+  }
+}
